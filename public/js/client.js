@@ -14,7 +14,7 @@ function showChat(){
 }
 
 function insereMessage(pseudo, message) {
-    $('#zone_chat').append('<p><strong>' + pseudo + '</strong> ' + message + '</p>');
+    document.getElementById("zone_chat").innerHTML += '<p><strong>' + pseudo + '</strong> ' + message + '</p>';
 }
 
 function changePage(){
@@ -36,16 +36,18 @@ function changePage(){
     // Quand un nouveau client se connecte, on affiche l'information
 
     socket.on('nouveau_client', function(pseudo) {
-        $('#zone_chat').append('<p><em>' + pseudo + ' a rejoint le Chat !</em></p>');
+        document.getElementById("zone_chat").innerHTML +='<p><em>' + pseudo + ' a rejoint le Chat !</em></p>';
     })
     // Lorsqu'on envoie le formulaire, on transmet le message et on l'affiche sur la page
-    $('#formulaire_chat').submit(function () {
-        var message = $('#message').val();
+    document.getElementById("formulaire_chat").onsubmit = function () {
+        var truc = document.getElementById("message");
+        var message = truc.value;
         socket.emit('message', message); // Transmet le message aux autres
         insereMessage(pseudo, message); // Affiche le message aussi sur notre page
-        $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
+        truc.value ='';
+        truc.focus(); // Vide la zone de Chat et remet le focus dessus
         return false; // Permet de bloquer l'envoi "classique" du formulaire
-    });
+    };
     // Ajoute un message dans la page
 }
 
