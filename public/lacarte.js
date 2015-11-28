@@ -15,15 +15,7 @@ marker.bindPopup("Bouh !").openPopup();
 function my_tchat() // ouvre le tchat
 {
 	document.getElementsByClassName("my_html")[1].style.display="";
-	document.getElementsByClassName("ferme")[0].style.display="";
-	document.getElementsByClassName("my_html")[0].style.width="45%";
-	document.getElementsByClassName("my_html")[1].style.width="45%";
+	document.getElementsByClassName("my_html")[0].style.width="60%";
+	document.getElementsByClassName("my_html")[1].style.width="30%";
 }
 marker.addEventListener("click",my_tchat);
-
-function closethis() //ferme le tchat 
-{	
-	document.getElementsByClassName("ferme")[0].style.display="none";
-	document.getElementsByClassName("my_html")[1].style.display="none";
-	document.getElementsByClassName("my_html")[0].style.width="95%";
-}
