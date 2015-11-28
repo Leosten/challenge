@@ -11,4 +11,19 @@ var circle = L.circle([48.594, 7.746], 500, {
 }).addTo(map);
 
 marker.bindPopup("Bouh !").openPopup();
-circle.bindPopup("Je suis un cercle.");
+
+function my_tchat() // ouvre le tchat
+{
+	document.getElementsByClassName("my_html")[1].style.display="";
+	document.getElementsByClassName("ferme")[0].style.display="";
+	document.getElementsByClassName("my_html")[0].style.width="45%";
+	document.getElementsByClassName("my_html")[1].style.width="45%";
+}
+marker.addEventListener("click",my_tchat);
+
+function closethis() //ferme le tchat 
+{	
+	document.getElementsByClassName("ferme")[0].style.display="none";
+	document.getElementsByClassName("my_html")[1].style.display="none";
+	document.getElementsByClassName("my_html")[0].style.width="95%";
+}

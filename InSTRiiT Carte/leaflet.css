@@ -18,6 +18,15 @@
 	left: 0;
 	top: 0;
 	}
+.my_html
+{
+	margin-top:2%;
+	margin-bottom:2%;
+	margin-left:2%;
+	margin-right:2%;
+	float:left;
+}
+
 .leaflet-container {
 	overflow: hidden;
 	-ms-touch-action: none;
