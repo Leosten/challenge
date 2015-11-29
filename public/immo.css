@@ -1,0 +1,41 @@
+#chatwindow
+{
+	width: 400px;
+	height: 407px;
+}
+
+#input
+{
+	position: relative;
+	bottom: 1px;
+	margin-left: 2px;
+	margin-top: 2px;
+	size: 300px;
+}
+
+#message
+{
+	width: 70%;
+}
+
+#envoi_message
+{
+	width: 30%;
+	height: 34px;
+}
+
+#formulaire_chat
+{
+	width: 398px;
+	padding-top: 1px;
+	margin-left: -2px;
+}
+
+#bodychat
+{
+	height: 307px;
+	width:100%;
+	margin-bottom: 2px;
+	white-space: normal;
+	overflow: scroll;
+}

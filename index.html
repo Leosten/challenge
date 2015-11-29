@@ -31,26 +31,26 @@
   <button id="btn2" style="display : inline-block">Login</button>
     <br>
     <br>
-  <div id="chatwindow" class="panel panel-primary" style="max-width:70%; margin-left:2%;">
+  <div id="chatwindow" class="panel panel-primary">
 
     <div class="panel panel-heading" style="width: 100%;white-space: nowrap;">
     Chat immo  <button type="button" class="close">×</button>
     </div>
 
-    <div class="panel-body" style="max-height: 400px; height: 60%;width:100%;overflow: scroll;">
-      <div class="panel panel-info" style="padding: 2%;">
+    <div id="bodychat" class="panel-body">
+      <div class="panel panel-info" style="padding: 5%;">
 
     <section id="zone_chat" ></section>
     </div>
-
-      <div class="input-group" style="width: 100%;">
+    </div>
+ <div id="input" class="input-group">
         <form action="/" method="post" id="formulaire_chat">
-          <input type="text" name="message" id="message" placeholder="Votre message..." size="50" autofocus style="width:100%"/>
-          <input type="submit" id="envoi_message" value="Envoyer" />
+          <input class="form-control" type="text" name="message" id="message" placeholder="Votre message..." autofocus/>
+          <input type="submit" id="envoi_message" value="Envoyer" class="input-group-addon" />
           </form>
       </div>
-    </div>
 	</div>
+  
 	</div>
 	<footer>
 		<script type="text/javascript" src="leaflet-src.js"></script>
